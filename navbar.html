@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.8.0/css/all.min.css">
+    <title>Navbar</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <!-- Logo -->
+            <div>
+                <img src="https://images.pexels.com/photos/430205/pexels-photo-430205.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Logo" height="30px" width="40px">
+            </div>
+            <!-- Menu -->
+            <div>
+                <ul>
+                    <li class="active">  
+                        <a href="iconmenu.html">Home <i class="fa-solid fa-house"></i></a>
+                    </li>
+                    <li>
+                        Cloth's <i class="fa-solid fa-person"></i><i class="fa-solid fa-child"></i><i class="fa-solid fa-person-dress"></i>
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                            <ul>
+                                <li><a href="./dropdownpage/men.html">MEN</a></li>
+                                <li><a href="./dropdownpage/women.html">WOMEN</a></li>
+                                <li><a href="./dropdownpage/child.html">KIDS</a>
+                                    <!-- Nested Dropdown -->
+                                    <div class="drop2">
+                                        <ul>
+                                            <li><a href="">GIRLS</a></li>
+                                            <li><a href="">BOYS</a></li>
+                                            <li><a href="">FOOTWEAR</a></li>
+                                            <li><a href="sidenavbar.html">WINTER</a></li>
+                                        </ul>
+                                    </div> 
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="abouus.html">Home & Livings <i class="fa-solid fa-gifts"></i></a>
+                    </li>
+                    <li>
+                        <a href="contect.html">Contact <i class="fa-solid fa-address-book"></i></a>
+                    </li>
+                    <li>
+                        <a href="">Help <i class="fa-brands fa-hire-a-helper"></i></a>
+                    </li>
+                    <li>
+                        <a href="">ToDoList <i class="fa-solid fa-pen"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Search -->
+            <div class="search-container">
+                <form>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

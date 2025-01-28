@@ -1,0 +1,131 @@
+/* General Page Styles */
+
+
+/* Back to Top Button */
+.backtotop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-image: linear-gradient(to right, red , yellow);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+footer{
+    /* margin-top: 10%; */
+}
+#main-contener{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin-top: 8em;
+    /* position: relative; */
+
+
+}
+.rightmain{
+    width: 300px;
+  margin-left:-50px;
+  /* position: absolute; */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+/* z-index: 100px; */
+
+}
+.right-linkset{
+   text-align: center; 
+   margin-top: 6em;
+
+ }
+ .right-linkset a:hover{
+    cursor: pointer;
+    border-bottom: 2px solid black;
+ }
+a{
+    text-decoration: none;
+    font-size: larger;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: black;
+}
+.left-main{
+   margin-top: -50px;
+   margin-left: 50px;
+   width: 60%;
+   object-fit: cover;
+}
+.left-main h3{
+    color: rgb(114, 107, 107);
+    line-height: 2px;
+    font-size: 25px;
+    margin-left: 20px;
+    text-align: center;
+    margin-top: 2em;
+   
+}
+.sub-leftmain{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 6em;
+    gap: 15px;
+}
+.sub-leftmain img{
+    border-radius: 20px;
+}
+
+.sub-leftmain  div .sub-text{
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: x-large;
+}
+#second-main{
+background-color: rgb(236, 236, 236);
+
+}
+#second-main div{
+    display: inline-block;
+    column-gap: 10px;
+    row-gap: 20px;
+   justify-content: center;
+align-items: center;
+    
+}
+.second-setimage{
+   margin-left: 20px;
+    }
+.second-main ,h1, h2{
+    text-align: center;
+    font-style: ;
+}
+h4,h5{
+    text-align: center;
+}
+
+/* Medium Devices (Tablets - max-width: 768px) */
+@media (max-width: 768px) {
+    #main-contener {
+        grid-template-columns: 1fr;
+        margin-top: 5em;
+    }
+
+    .left-main {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .rightmain {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .sub-leftmain {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}

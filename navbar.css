@@ -1,0 +1,126 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Ensure it's always above other elements */
+    background-color: white; /* Prevent transparency */
+    transition: background-color 0.3s ease;
+    border: 1px solid rgb(247, 238, 238);
+    font-size: medium;
+}
+
+
+.navdiv {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center elements vertically */
+    justify-content: space-around; /* Equal spacing around items */
+}
+
+.navbar.scrolled {
+    background-color: white; /* Darker background on scroll */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.navdiv img {
+    display: block; /* Ensure proper image block display */
+    width: 50px; /* Logo size */
+    height: 50px;
+    margin: 4px;
+}
+
+/* ==================Navbar List Styling================= */
+.navdiv ul {
+    list-style: none; /* Removes bullets */
+    margin: 0;
+    padding: 0; /* No padding */
+    display: flex; /* Horizontal layout */
+    font-weight: bold;
+}
+
+.navdiv ul li {
+    position: relative;
+    padding: 0.5em 1em; /* Space inside items */
+    cursor: pointer;
+    transition: background 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+
+.navdiv ul li:hover {
+    background-color: green; /* Hover state color */
+}
+
+/* ====================Dropdown Menu Styling========================= */
+.dropdown, .drop2 {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: 100%;
+    left: 0;
+    min-width: 150px; /* Minimum dropdown width */
+    z-index: 1000;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.dropdown ul, .drop2 ul {
+    flex-direction: column; /* Stacked items */
+}
+
+.dropdown ul li, .drop2 ul li {
+    padding: 0.5em;
+}
+
+.navdiv ul ul li {
+    border-left: 4px solid black; /* Styling dropdown items */
+    border-right: 4px solid black;
+    padding: 10px;
+}
+
+.dropdown ul li:hover, .drop2 ul li:hover {
+    background-color: #575757;
+    border-left: 4px solid green; /* Highlight on hover */
+    border-right: 4px solid green;
+}
+
+.navdiv ul li:hover > .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown ul li:hover > .drop2 {
+    display: block;
+    left: 100%; /* Align nested dropdown */
+    top: 0;
+}
+ .drop2 a   {
+    text-decoration: none;
+    color: white;
+}
+/* =================Search Bar Styling========================== */
+.search-container {
+    float: right;
+}
+
+input {
+    padding: 6px; /* Input field spacing */
+    border-radius: 8em; /* Rounded corners */
+}
+
+.search-container .btn {
+    padding: 8px 8px; /* Button padding */
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd; /* Light button color */
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+ul li a{
+    text-decoration: none;
+    /* color: black; */
+    color: black;
+}
+.dropdown ul li a{
+    text-decoration: none; 
+    color: white;
+}

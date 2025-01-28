@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="../footer.css">
+    <title>Menpage</title>
+    <style>
+        .backtotop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+     <!-- mainsection -->
+      
+     <div id="grid-contener"></div>
+
+
+    <!-- Back-to-Top Button -->
+    <button id="backToTop" class="backtotop">↑ Back to Top</button>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Fetch Navbar HTML -->
+
+
+
+    <script>
+        fetch('../navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-placeholder').innerHTML = data)
+            .catch(error => console.error('Error loading navbar:', error));
+
+            fetch("navbar.css")
+  .then(response => response.text())
+  .then(data => {
+    // You can dynamically apply the styles here or use it as needed.
+    console.log(data);
+  })
+  .catch(error => {
+    console.error("Error fetching CSS:", error);
+  });
+
+    </script>
+
+    <!-- Fetch Footer HTML -->
+    <script>
+        // footer html
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data)
+            .catch(error => console.error('Error loading footer:', error));
+           
+            fetch("./footer.css", {
+  method: "GET",
+  headers: {
+    "Content-Type": "text/css"
+  }
+})
+// footer css
+.then(response => response.text())
+.then(data => {
+  console.log(data);  // Logs the fetched CSS content
+})
+.catch(error => console.error("Error fetching CSS:", error));
+
+
+
+
+    </script>
+
+    <!-- Scroll Back-to-Top Functionality -->
+    <script src="../scrollbacktotop.js"></script>
+    <script src="men.js"></script>
+</body>
+</html>

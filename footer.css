@@ -1,0 +1,68 @@
+*{
+    margin-left: 0;
+    margin-right: 0;
+}
+footer {
+    background-color: #0a153d; /* Semi-transparent */
+    opacity: 0.9;
+    color: white;
+    padding: 20px;
+    margin-bottom: 0;
+    justify-content: center;
+    margin-top: 4em;
+    /* width: 100%; */
+    
+}
+
+.contectfooter {
+    margin-left: 20px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Four columns */
+}
+
+footer div h4 {
+    color: black;
+}
+
+.fontfour{
+grid-template-columns: 1fr 1fr;
+margin-top: 2em;
+}
+.font-four{
+   display: inline;
+  gap: 5px;
+  margin-left: 3px;
+  align-items: center;
+}
+
+.font-four div{
+display: flex;
+align-items: center;
+gap: 12px;
+margin-top: 6px;
+}
+/* =================Shopping Image with 3D Effect=================== */
+
+.shopingimage {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    perspective: 1000px; /* Depth for 3D effect */
+}
+
+.shopingimage img {
+    width: 300px;
+    height: 200px;
+    transform: none; /* No initial rotation */
+    transition: transform 0.5s, box-shadow 0.5s;
+    transform-style: preserve-3d; /* Maintains 3D perspective */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.shopingimage img:hover {
+    transform: rotateY(20deg) rotateX(10deg) scale(1.05); /* Rotate on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); 
+}
